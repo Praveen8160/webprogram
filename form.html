@@ -3,40 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>CA4-Form</title>
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
     <div class="container">
         <div class="form-wrapper">
+            <div class="input-wrapper">
+                <button type="button" class="Login">Login</button>
+            </div>
             <div class="heading">
                 <h3>Login</h3>
                 <h2>Form</h2>
             </div>
-            <form action="" class="form">
+            <form class="form" id="form">
                 <div class="input-wrapper">
-                    <label for="username" id="usename" class="labels">Username</label>
-                    <input type="text" class="inputs" placeholder="Enter username">
+                    <label for="username" class="labels">Username</label>
+                    <input type="text" class="inputs" id="username" name="data" placeholder="Enter username">
                 </div>
                 <div class="input-wrapper">
-                    <label for="email" id="email" class="labels">Email</label>
-                    <input type="email" class="inputs" placeholder="Enter email">
+                    <label for="email" class="labels">Email</label>
+                    <input type="email" class="inputs" id="email" placeholder="Enter email">
                 </div>
                 <div class="input-wrapper">
-                    <label for="password" id="usename" class="labels">Password</label>
-                    <input type="password" class="inputs" placeholder="Enter password">
+                    <label for="password" class="labels">Password</label>
+                    <input type="password" class="inputs" id="password" placeholder="Enter password">
                 </div>
-                <!-- <div class="input-wrapper">
-                    <label for="password" id="usename" class="labels">Gender</label>
-                
-                    <input type="radio" class="re-btn" name="gender"><span>Male</span>
-                    <input type="radio" class="re-btn" name="gender"><span>Female</span>
-                </div> -->
                 <div class="input-wrapper">
-                    <button type="button" class="btn">Submit</button>
+                    <label for="radio" class="labels">Gender</label>
+                    <div class="radio-wrapper">
+                        <input type="radio" class="re-btn" name="gender" id="gender" value="male"><span>Male</span>
+                        <input type="radio" class="re-btn" name="gender" id="gender" value="female"><span>Female</span>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <label for="address" class="labels">Address</label>
+                    <textarea rows="3" cols="35" id="address" class="area" placeholder="Enter Address"></textarea>
+                </div>
+                <div class="input-wrapper">
+                    <label for="phone" class="labels">Phone</label>
+                    <input type="tel" class="inputs" id="Phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Enter Phone No.">
+                </div>
+                <div class="input-wrapper">
+                    <label for="check" class="labels">Gender</label>
+                    <div class="radio-wrapper" style="margin-left: 20px;">
+                        <input type="checkbox" class="re-btn" id="dance" name="hobby" value="dance"><span>dance</span>
+                        <input type="checkbox" class="re-btn" id="sing" name="hobby" value="sing"><span>singing</span>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <label for="date" class="labels">DOB</label>
+                    <input type="date" class="inputs" id="date" placeholder="Enter DOB">
+                </div>
+                <div class="input-wrapper">
+                    <label for="Country" id="Country" class="labels">Country</label>
+                    <select class="inputs" id="drop">
+                        <option class="option" value="India">India</option>
+                        <option class="option" value="China">China</option>
+                        <option class="option" value="USA">USA</option>
+                    </select>
+                </div>
+                <div class="input-wrapper">
+                    <button type="button" class="btn submit" onclick="send()">Submit</button>
+                    <button type="reset" class="btn reset">Reset</button>
                 </div>
             </form>
         </div>
     </div>
+    <script src="form.js"></script>
 </body>
 </html>

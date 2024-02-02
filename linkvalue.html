@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset=utf-8 /> 
+<title>Collect the value of href, hreflang, rel, target, and type attributes of a link</title> 
+</head> 
+<body> 
+<p><a id="google" type="text/html" hreflang="en-us" rel="nofollow" target="_parent" href="https://www.Google.com/">Google</a></p> 
+<button onclick="getAttributes()">Click here to get the attribute's value</button>  
+</body> 
+<script>
+    function getAttributes()
+{
+ var u = document.getElementById("google").href;
+ alert('href attribute of the link is : '+u);
+ var v = document.getElementById("google").hreflang;   
+ alert('hreflang attribute of the link is : '+v);
+ var w = document.getElementById("google").rel; 
+  alert('rel attribute of the link is : '+w);
+ var x = document.getElementById("google").target; 
+  alert('taget attribute of the link is : '+x);
+ var y = document.getElementById("google").type; 
+  alert('type attribute of the link is : '+y);  
+}
+
+</script>
+</html>

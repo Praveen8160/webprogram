@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bharat Time</h1>
+    <p>this is shows the current time of bharat</p>
+    <p id="clock"><span id="hour"></span><span id="minutes">:</span><span id="second">:</span></p>
+</body>
+<script>
+    let clock=document.getElementById('hour');
+    let second=document.getElementById('second');
+    let minute=document.getElementById('minutes');
+    setInterval(()=>
+    {
+        let curr=new Date();
+        clock.innerHTML=curr.getHours();
+        minute.innerHTML=":"+curr.getMinutes();
+        second.innerHTML=":"+curr.getSeconds();
+    },1000);
+</script>
+</html>

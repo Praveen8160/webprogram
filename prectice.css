@@ -1,0 +1,41 @@
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(back.png);
+    background-size: cover;
+}
+.box{
+    width: 25rem;
+    height: 25rem;
+    background-color: rgb(55, 117, 117);
+    mix-blend-mode: screen;
+    z-index: 1000;
+}
+/* .box::after{
+    content: "";
+    width: 25rem;
+    height: 25rem;
+    border-top: 3px solid rebeccapurple;
+    position: absolute;
+    mix-blend-mode: screen;
+    /* animation: anim 1s ease-in-out infinite; */
+/* }
+@keyframes anim{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} */
+/* .box::before{
+    content: "";
+    width: 25rem;
+    height: 25rem;
+    border-bottom: 3px solid rebeccapurple;
+    position: absolute;
+} */

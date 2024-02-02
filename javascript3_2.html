@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CA-8_2</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <center>
+  <canvas id="intersectionCanvas" width="400" height="400"></canvas>
+</center>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the canvas element and its context
+      const canvas = document.getElementById('intersectionCanvas');
+      const ctx = canvas.getContext('2d');
+
+      // Draw the first rectangle
+      ctx.fillStyle = 'blue';
+      ctx.fillRect(50, 50, 200, 150);
+
+      // Draw the second rectangle with alpha transparency
+      ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+      ctx.fillRect(150, 100, 200, 150);
+    });
+  </script>
+</body>
+</html>

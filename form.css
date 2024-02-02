@@ -10,32 +10,16 @@ html{
 .container{
     height: 100vh;
     width: 100%;
-    background-color: rgb(157, 216, 218);
+    background: linear-gradient(98deg,rgba(133, 230, 239, 0.2) 48%,rgba(7, 221, 142, 0.5) 0%),url(back.png) no-repeat center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     animation: anim6 6s ease-in-out infinite;
 }
-@keyframes anim6{
-    0%{
-        background-color: #022F40;
-    }
-    30%{
-        background-color: #38AECC
-    }
-    55%{
-        background-color: #0090C1;
-    }
-    85%{
-        background-color: #183446;
-    }
-    100%{
-        background-color: #046E8F;
-    }
-}
 .form-wrapper{
     width: 70rem;
-    background: linear-gradient(100deg,rgba(133, 230, 239, 0.5) 45%,rgba(7, 221, 142, 0.5) 0%);
+    background: linear-gradient(98deg,rgba(133, 230, 239, 0.7) 45%,rgba(7, 221, 142, 1) 0%);
     border-radius: 8%;
     box-shadow: 1rem 1rem 1rem rgb(34, 33, 33);
     position: relative;
@@ -50,11 +34,19 @@ html{
     justify-content: center;
     margin-top: 2rem;
     margin-bottom: 12rem;
+    visibility: hidden;
+    opacity: 0;
+}
+.change .heading{
+    visibility: visible;
+    opacity: 1;
 }
 h3{
     margin-right: 2rem;
     position: absolute;
-    left: 32%;
+    left: 36%;
+}
+.change h3{
     animation: anim3 .5s ease-in-out;
 }
 @keyframes anim3{
@@ -72,7 +64,9 @@ h3{
 
 h2{
     position: absolute;
-    right: 31%;
+    right: 29%;
+}
+.change h2{
     animation: anim4 .5s ease-in-out;
 }
 @keyframes anim4{
@@ -82,13 +76,19 @@ h2{
         opacity: 0;
     }
     100%{
-        right: 31%;
+        right: 29%;
         visibility: visible;
         opacity: 1;
     }
 }
 .form{
     margin-bottom: 20%;
+    visibility: hidden;
+    opacity: 0;
+}
+.change .form{
+    visibility: visible;
+    opacity: 1;
 }
 .input-wrapper{
     /* font-size: 2rem;
@@ -107,7 +107,6 @@ h2{
     letter-spacing: .2rem;
     position: absolute;
     left: 25%;
-    animation: anim1 2s ease;
 }
 @keyframes anim1{
     0%{
@@ -121,6 +120,9 @@ h2{
         opacity: 1;
     }
 }
+.change .labels{
+    animation: anim1 2s ease;
+}
 .inputs{
     outline: none;
     border: none;
@@ -129,11 +131,13 @@ h2{
     border-radius: 20rem;
     box-shadow: .1rem .1rem .1rem rgba(7, 221, 142, 0.5);
     position: absolute;
-    right: 9%;
+    right: 6%;
     background: transparent;
     border: 2px ridge;
-    animation: anim2 2s ease;
     transform-origin: right;
+}
+.change .inputs{
+    animation: anim2 2s ease;
 }
 @keyframes anim2{
     0%{
@@ -142,7 +146,7 @@ h2{
         opacity: 0;
     }
     100%{
-        right: 9%;
+        right: 6%;
         visibility: visible;
         opacity: 1;
     }
@@ -151,42 +155,97 @@ input::placeholder{
     padding-left: 20px;
     color: rgb(5, 67, 72);
 }
+input[type="text"],[type="password"],[type="email"],[type="tel"],[type="date"] {
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+.radio-wrapper{
+    margin-left:14rem ;
+    position: absolute;
+    right: 14rem;
+    margin-bottom: 1rem;
+}
+.change .radio-wrapper{
+    animation: radio 2s ease;
+}
+.radio-wrapper span{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+.re-btn{
+    margin-left: 2rem;
+    background-color: red;
+}
+.re-btn:focus{
+    color: red;
+}
+.re-btn:focus{
+    box-shadow: none;
+}
+@keyframes radio{
+    0%{
+        right: -25%;
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        right: 14rem;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.area{
+    outline: none;
+    border: none;
+    /* height: 4rem;
+    width: 30rem; */
+    border-radius: 2rem;
+    box-shadow: .1rem .1rem .1rem rgba(7, 221, 142, 0.5);
+    position: absolute;
+    right: 6%;
+    background: transparent;
+    border: 2px ridge;
+    margin-bottom: 8rem;
+    transform-origin: right;
+}
+.change .area{
+    animation: anim2 2s ease;
+}
+textarea::placeholder{
+    padding-left: 20px;
+    color: rgb(5, 67, 72);
+}
+textarea:focus{
+    box-shadow: .5rem .5rem 1rem black ;
+}
+option{
+    background-color: rgba(7, 221, 142, 0.5) ;
+    border-radius: 15rem;
+}
+option:focus{
+    background-color: yellowgreen;
+}
 .btn{
-    width: 20rem;
+    width: 15rem;
     height: 4rem;
     border-radius: 20rem;
-    background: linear-gradient(100deg,rgba(133, 230, 239, 0.5) 20%,rgba(7, 221, 142, 0.5) 0%);
-    margin-top: 30px;
+    background: transparent;
     font-size: 2rem;
     font-family: monospace;
     font-weight: 800;
     letter-spacing: .2rem;
     transition: transform 0.5s;
     position: absolute;
-    bottom: 21%;
+    bottom: 10%;
+}
+.change .btn{
     animation: anim5 0.9s ease-in-out;
 }
-@keyframes anim5{
-    0%{
-        bottom: -21%;
-        visibility: hidden;
-        opacity: 0;
-    }
-    100%{
-        bottom: 21%;
-        visibility: visible;
-        opacity: 1;
-    }
+.submit{
+    left: 30rem;
 }
-.btn:hover{
-    transform: scale(.9);
-}
-.btn:active{
-    transform: translateY(-8%);
-    box-shadow: .5rem .5rem 1rem black ;
-}
-input:focus{
-    box-shadow: .5rem .5rem 1rem black ;
+.reset{
+    left: 48rem;
 }
 
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form 2</title>
+</head>
+<body>
+    <form id="form2" action="process-data.html" method="post">
+        <label for="receivedData">Received Data:</label>
+        <input type="text" name="receivedData" id="receivedData" readonly>
+    </form>
+
+    <script>
+        // JavaScript code to populate the second form field with the received data
+        window.onload = function() {
+            // Get the data from the hidden field in the first form
+            const receivedData = document.getElementById("hiddenData").value;
+
+            // Set the data to the input field in the second form
+            document.getElementById("receivedData").value = receivedData;
+        }
+    </script>
+</body>
+</html>

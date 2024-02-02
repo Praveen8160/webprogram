@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-1{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.loader-1{
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 5%;
+}
+.loader-2{
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.line{
+    width: 1.5rem;
+    height: 5rem;
+    background-color: rgb(32, 85, 106);
+    border-radius: 1rem;
+}
+.line:nth-child(1)
+{
+    animation: load2 ease .7s infinite;
+}
+.line:nth-child(2)
+{
+    animation: load2 ease .8s infinite;
+}
+.line:nth-child(3)
+{
+    animation: load2 ease .5s infinite;
+}
+.line:nth-child(4)
+{
+    animation: load2 ease .7s infinite;
+}
+.line:nth-child(5)
+{
+    animation: load2 ease .9s infinite;
+}
+@keyframes load2 {
+    0%{
+        height: 5rem;
+    }
+    60%{
+        height: 20rem;
+    }
+    100%{
+        height: 5rem;
+    }
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="loader-1">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="loader-2">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+</body>
+</html>
